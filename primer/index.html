@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNA Motif Finder with Primer Design</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        footer p {
+            color: black;
+            font-weight: bold;
+            font-size: 14px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        footer .features {
+            color: black;
+            font-weight: bold;
+            font-size: 13px;
+            text-align: center;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>DNA Motif Finder with Primer Design</h1>
+
+    <textarea id="sequence" placeholder="Enter DNA sequence here..."></textarea><br>
+
+    <button onclick="findRepeatsAndDesignPrimers()">Find Tandem Repeats & Design Primers</button>
+    <button onclick="reloadPage()">Reload</button>
+
+    <h2>Repeat Motif Results with Primer Design</h2>
+    <table id="resultTable">
+        <thead>
+            <tr>
+                <th>Motif</th>
+                <th>Total Repeat Length</th>
+                <th>Start Position</th>
+                <th>End Position</th>
+                <th>Forward Primer</th>
+                <th>Forward Primer Binding Position</th>
+                <th>Reverse Primer</th>
+                <th>Reverse Primer Binding Position</th>
+                <th>Amplicon Length</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Results will be inserted here dynamically -->
+        </tbody>
+    </table>
+
+    <footer>
+        <p>Designed by Balle Sudheer Naidu <span>(MSc Molecular Biology and Biotechnology)</span></p>
+        <p class="features">This tool identifies tandem repeat regions in DNA sequences with high precision and designs primers following strict guidelines. It ensures accurate motif positions and amplicon lengths for reliable results.</p>
+    </footer>
+</div>
+
+<script src="scripts.js"></script>
+</body>
+</html>
